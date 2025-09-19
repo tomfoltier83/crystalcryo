@@ -1,0 +1,50 @@
+.container {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.overlay {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.title {
+  font-size: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 1.111rem 20px 0 20px;    
+  position: relative;
+  z-index: 1;
+}
+
+.title span {
+  color: var(--blue-400);
+}
+
+
+.subTitle {
+  text-align: center;
+  padding: 1.111rem 20px;
+  letter-spacing: 1px;
+  line-height: 25px;
+  position: relative;
+  z-index: 1;
+  background: black;
+}
+
+.button {
+  font-family: "Cinzel", serif;
+    position: relative;
+  z-index: 1;
+}
