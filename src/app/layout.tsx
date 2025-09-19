@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Cinzel } from "next/font/google";
+import { Raleway } from "next/font/google";
 import { Lato } from "next/font/google";
 import "./globals.css";
 
-const cinzel = Cinzel({
+const raleway = Raleway({
   subsets: ["latin"],
   weight: ["400", "700", "900"],
 });
@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${cinzel.className} ${lato.className}`}>
+      <body className={`${raleway.className} ${lato.className}`}>
         {children}
       </body>
     </html>

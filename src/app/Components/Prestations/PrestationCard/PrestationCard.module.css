@@ -1,0 +1,159 @@
+/* ---- Flip card ---- */
+.card {
+  position: relative;
+  perspective: 1200px; /* profondeur */
+}
+
+.cardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.cardFace {
+  position: absolute;
+  inset: 0;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(6px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr auto auto; /* titre, texte, bouton, image */
+  gap: 12px;
+}
+
+.front {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 20px;
+  border-radius: 10px;
+}
+
+.front h3 {
+  padding: 0 20px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.front p {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  line-height: 20px;
+  font-weight: 300;
+  padding: 0 20px;
+}
+
+.back {
+  transform: rotateY(180deg);
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.media {
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  /* Choisis l’un des deux patterns ci-dessous : */
+
+  /* A) Ratio fixe : l’image n’est pas rognée verticalement */
+  /* aspect-ratio: 16 / 9; */
+
+  /* B) Hauteur min responsive (laisse le contenu décider du reste) */
+  min-height: 180px;
+}
+
+.prices {
+  list-style: none;
+  margin: 8px 0 16px;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.prices li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.backActions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Boutons */
+
+.button {
+  border-radius: 50px;
+  background-color: var(--blue-400);
+  border: none;
+  width: fit-content;
+  padding: 10px 20px;
+  color: white;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.buttonPrimary,
+.buttonGhost {
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: transparent;
+  color: white;
+  transition: transform 0.12s ease, background 0.12s ease,
+    border-color 0.12s ease;
+}
+.button:hover,
+.buttonPrimary:hover,
+.buttonGhost:hover {
+  transform: translateY(-1px);
+}
+
+.buttonPrimary {
+  background: var(--cryo-ice, #a3c1d2);
+  border-color: var(--cryo-ice, #a3c1d2);
+  color: #0f1b26;
+}
+.buttonGhost {
+  background: transparent;
+}
+
+/* Images démo (remplace par tes vraies images) */
+.imageVoiture,
+.imageBateau,
+.imageIndustrie {
+  width: 98%;
+  height: 200px;
+  background-size: cover;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+.imageVoiture {
+  background-image: url("/images/presta_voiture.png");
+}
+.imageBateau {
+  background-image: url("/images/presta_bateau.png");
+}
+.imageIndustrie {
+  background-image: url("/images/presta_industrie.png");
+}

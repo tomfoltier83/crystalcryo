@@ -1,0 +1,54 @@
+.container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin-top: -5rem;
+}
+
+.container p {
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 0 1.111rem;
+}
+
+.content {
+  width: 100%;
+  background-color: #b8d3e3;
+}
+
+.upper,
+.lower {
+  will-change: transform, opacity;
+}
+
+.prestations {
+  padding: 20px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.imageVoiture,
+.imageBateau,
+.imageIndustrie {
+  width: 98%;
+  height: 200px;
+  background-size: cover;
+  margin: auto;
+  border-radius: 10px;
+}
+.imageVoiture {
+    background-image: url("/images/presta_voiture.png");
+
+}
+.imageBateau {
+
+  background-image: url("/images/presta_bateau.png");
+
+}
+.imageIndustrie {
+    background-image: url("/images/presta_industrie.png");
+
+}

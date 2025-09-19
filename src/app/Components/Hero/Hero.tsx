@@ -26,7 +26,7 @@ function Hero() {
             transition={{ duration: 0.6 }}
             className={styles.title}
           >
-            cryogénie
+            Cryogénie,
           </motion.h1>
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
@@ -35,7 +35,7 @@ function Hero() {
             transition={{ duration: 0.6 }}
             className={styles.title}
           >
-            exception.
+            Exception.
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 24 }}
@@ -43,7 +43,7 @@ function Hero() {
             viewport={{ once: true, amount: 0.6 }}
             transition={{ duration: 0.6,delay: .3 }}
             className={styles.subTitle}
-            style={{ paddingBottom: "40px" }}
+            style={{ paddingBottom: "30px" }}
           >
             Le <span>froid</span> au service de l’<span>excellence</span>.
           </motion.p>
@@ -54,7 +54,7 @@ function Hero() {
             transition={{ duration: 0.6, delay: .6 }}
             className={styles.button}
           >
-            découvrir
+            Découvrir
           </motion.button>
         </div>
       </div>

@@ -34,7 +34,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Cinzel", serif;
+  font-family: "Raleway";
 }
 
 a {
@@ -42,16 +42,6 @@ a {
   text-decoration: none;
 }
 
-button {
-  background-color: transparent;
-  border: 1px solid var(--blue-400);
-  color: white;
-  font-family: inherit;
-  width: fit-content;
-  padding: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
 
 @media (prefers-color-scheme: dark) {
   html {

@@ -5,12 +5,13 @@
   display: flex;
   flex-direction: column;
   color: white;
+  background-image: url("/images/aboutBackground.png");
 }
 
 .overlay {
   position: relative;
   width: 100%;
-  height: 70vh;
+  height: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -40,7 +41,6 @@
   line-height: 25px;
   position: relative;
   z-index: 1;
-  background: black;
 }
 
 .button {
