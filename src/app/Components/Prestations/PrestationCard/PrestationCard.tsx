@@ -26,20 +26,13 @@ export default function PrestationsCard({
   const recalc = () => {
     const fh = frontRef.current?.scrollHeight ?? 0;
     const bh = backRef.current?.scrollHeight ?? 0;
-    const next = flipped ? Math.max(fh, bh) - 20 : Math.max(fh, bh) + 20; 
+    const next = flipped ? Math.max(fh, bh) - 20 : Math.max(fh, bh) + 20 ; 
     setHeight(prev => (prev === undefined || Math.abs(prev - next) > 1 ? next : prev));
   };
 
   useLayoutEffect(() => {
     recalc();
   }, [flipped]);
-
-  useEffect(() => {
-    const onResize = () => recalc();
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   return (
     <div className={styles.card} ref={cardRef} style={{ height: height }}>
@@ -52,10 +45,13 @@ export default function PrestationsCard({
         <div className={`${styles.cardFace} ${styles.front}`} ref={frontRef}>
           <h3>{title}</h3>
           <p>{description}</p>
-          <button className={styles.button} onClick={() => setFlipped(true)}>
+
+          <div className={`${styles.media} ${imageClass}`}>
+          <button className={`${styles.button} ${styles.buttonGhost}`} onClick={() => setFlipped(true)}>
             Voir les tarifs
           </button>
-          <div className={`${styles.media} ${imageClass}`} />
+        </div>
+
         </div>
 
         {/* BACK */}

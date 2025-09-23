@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import { Lato } from "next/font/google";
+import "@fortawesome/fontawesome-svg-core/styles.css"; 
 import "./globals.css";
 
 const raleway = Raleway({

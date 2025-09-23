@@ -8,14 +8,14 @@ export default function Prestations() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start 100%", "end 95%"],
+    offset: ["start 90%", "end 100%"],
   });
 
   const upperX = useTransform(scrollYProgress, [0, 0.2], [-400, 0]);
-  const upperOpacity = useTransform(scrollYProgress, [0, -1, 1], [0, 1, 1]);
+  const upperOpacity = useTransform(scrollYProgress, [0, 0.3, 1], [0, 1, 1]);
 
   const lowerX = useTransform(scrollYProgress, [0, 0.2], [500, 0]);
-  const lowerOpacity = useTransform(scrollYProgress, [0, -1, 1], [0, 1, 1]);
+  const lowerOpacity = useTransform(scrollYProgress, [0, 0.3, 1], [0, 1, 1]);
 
   return (
     <div className={styles.container} ref={ref}>
