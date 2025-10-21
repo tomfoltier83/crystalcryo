@@ -1,0 +1,35 @@
+.container {
+  position: fixed;
+  background: #000000;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  font-family: "Raleway";
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.timerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 50px;
+}
+
+.timerItem {
+  display: flex;
+  gap: 8px;
+  font-size: 28px;
+}
+
+.timerValue {
+  font-weight: 600;
+  font-family: "Lato";
+}
+
+.text {
+  padding-top: 50px;
+}

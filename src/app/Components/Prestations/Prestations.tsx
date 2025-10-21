@@ -2,7 +2,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import styles from "./Prestations.module.css";
-import PrestationCard from "./PrestationCard/PrestationCard"
+import PrestationCard from "./PrestationCard/PrestationCard";
 
 export default function Prestations() {
   const ref = useRef<HTMLDivElement>(null);
@@ -42,12 +42,14 @@ export default function Prestations() {
             title="Cryogénie Automobile"
             description={
               <>
-                Un procédé de nettoyage par projection de glace carbonique qui élimine graisses,
-                poussières et impuretés sans eau, sans produits chimiques et sans abrasion.
+                Un procédé de nettoyage par projection de glace carbonique qui
+                élimine graisses, poussières et impuretés sans eau, sans
+                produits chimiques et sans abrasion.
                 <br />
                 <br />
-                Idéal pour l’entretien des véhicules de prestige, des moteurs aux carrosseries,
-                en garantissant un résultat irréprochable tout en préservant les matériaux.
+                Idéal pour l’entretien des véhicules de prestige, des moteurs
+                aux carrosseries, en garantissant un résultat irréprochable tout
+                en préservant les matériaux.
               </>
             }
             imageClass={styles.imageVoiture}
@@ -62,12 +64,13 @@ export default function Prestations() {
             title="Cryogénie Nautique"
             description={
               <>
-                Service dédié aux yachts et bateaux. Traitement des coques, ponts et moteurs en
-                profondeur, élimination des dépôts salins, graisses et moisissures, en respectant
-                les matériaux sensibles.
+                Service dédié aux yachts et bateaux. Traitement des coques,
+                ponts et moteurs en profondeur, élimination des dépôts salins,
+                graisses et moisissures, en respectant les matériaux sensibles.
                 <br />
                 <br />
-                Une méthode propre et efficace pour prolonger la longévité et l’éclat.
+                Une méthode propre et efficace pour prolonger la longévité et
+                l’éclat.
               </>
             }
             imageClass={styles.imageBateau}
@@ -82,12 +85,13 @@ export default function Prestations() {
             title="Cryogénie Industrielle & Patrimoniale"
             description={
               <>
-                Nettoyage de pièces industrielles, équipements sensibles et éléments de patrimoine :
-                élimination des peintures, graisses et dépôts sans endommager les surfaces, même
-                fragiles.
+                Nettoyage de pièces industrielles, équipements sensibles et
+                éléments de patrimoine : élimination des peintures, graisses et
+                dépôts sans endommager les surfaces, même fragiles.
                 <br />
                 <br />
-                Une solution respectueuse et durable pour environnements exigeants.
+                Une solution respectueuse et durable pour environnements
+                exigeants.
               </>
             }
             imageClass={styles.imageIndustrie}
