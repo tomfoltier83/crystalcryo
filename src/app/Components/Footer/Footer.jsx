@@ -41,7 +41,7 @@ function Footer() {
                         <Link href="" className={styles.social}>
                             <FontAwesomeIcon icon={faInstagram} style={{ color: "white" }} />
                         </Link>
-                        <p><i>Bientôt...</i></p>
+                        <p>@crystal_cryo83</p>
                     </div>
                 </div>
                 <div className={styles.links}>

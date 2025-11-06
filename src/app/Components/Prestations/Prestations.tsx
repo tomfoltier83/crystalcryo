@@ -73,13 +73,13 @@ moisissures et odeurs.
               {
                 label: "Formule Rubis",
                 detail: ["Haut moteur."],
-                time: "~2h",
+                time: "",
                 price: "à partir de 380€",
               },
               {
                 label: "Formule Saphir",
                 detail: ["Haut moteur", "Bas moteur", "Compartiment moteur."],
-                time: "~3h30",
+                time: "",
                 price: "à partir de 880€",
               },
               {
@@ -90,7 +90,7 @@ moisissures et odeurs.
                   "Compartiment moteur",
                   "Châssis.",
                 ],
-                time: "~5h",
+                time: "",
                 price: "à partir de 1280€",
               },
               {
@@ -103,7 +103,7 @@ moisissures et odeurs.
                   "Intérieur roues",
                   "Intérieur jantes.",
                 ],
-                time: "~7h",
+                time: "",
                 price: "à partir de 1880€",
               },
               {
@@ -117,7 +117,7 @@ moisissures et odeurs.
                   "Intérieur jantes",
                   "Traitemet roulements.",
                 ],
-                time: "~10h",
+                time: "",
                 price: "à partir de 2780€",
               },
             ]}
