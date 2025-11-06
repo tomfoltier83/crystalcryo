@@ -48,3 +48,19 @@
     position: relative;
   z-index: 1;
 }
+
+.notaBene {
+  width: 90%;
+  border: 1px solid white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.notaBene span {
+  font-style: italic;
+}

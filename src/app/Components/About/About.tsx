@@ -21,6 +21,10 @@ function About() {
           inégalés, sans compromis sur la qualité.
         </p>
         {/* <button className={styles.button}>en savoir plus</button> */}
+        <div className={styles.notaBene}>
+          <span>À savoir :</span>
+          <p>Il est possible de traiter absolument toutes les surfaces et tous types de supports.</p>
+        </div>
       </div>
     </div>
   );

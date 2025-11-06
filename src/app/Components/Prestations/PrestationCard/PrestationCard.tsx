@@ -8,14 +8,19 @@ type CardProps = {
   title: string;
   description: React.ReactNode;
   imageClass: string;
-  prices: Array<{ label: string; price: string }>;
+  formules: Array<{
+    label: string;
+    detail: string[];
+    time: string;
+    price: string;
+  }>;
 };
 
 export default function PrestationsCard({
   title,
   description,
   imageClass,
-  prices,
+  formules,
 }: CardProps) {
   const [flipped, setFlipped] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
@@ -26,8 +31,10 @@ export default function PrestationsCard({
   const recalc = () => {
     const fh = frontRef.current?.scrollHeight ?? 0;
     const bh = backRef.current?.scrollHeight ?? 0;
-    const next = flipped ? Math.max(fh, bh) - 20 : Math.max(fh, bh) + 20 ; 
-    setHeight(prev => (prev === undefined || Math.abs(prev - next) > 1 ? next : prev));
+    const next = flipped ? Math.max(fh, bh) + 20 : Math.max(fh, bh) + 40;
+    setHeight((prev) =>
+      prev === undefined || Math.abs(prev - next) > 1 ? next : prev
+    );
   };
 
   useLayoutEffect(() => {
@@ -47,21 +54,38 @@ export default function PrestationsCard({
           <p>{description}</p>
 
           <div className={`${styles.media} ${imageClass}`}>
-          <button className={`${styles.button} ${styles.buttonGhost}`} onClick={() => setFlipped(true)}>
-            Voir les tarifs
-          </button>
-        </div>
-
+            {title !== "Cryogénie Industrielle & Patrimoniale" && (
+              <button
+                className={`${styles.button} ${styles.buttonGhost}`}
+                onClick={() => setFlipped(true)}
+              >
+                Voir les tarifs
+              </button>
+            )}
+          </div>
         </div>
 
         {/* BACK */}
         <div className={`${styles.cardFace} ${styles.back}`} ref={backRef}>
-          <h4 style={{ marginTop: 0 }}>Tarifs</h4>
-          <ul className={styles.prices}>
-            {prices.map((p, i) => (
+          <h4 style={{ marginTop: 0 }}>
+            Tarifs <span>(HT)</span>
+          </h4>
+          <ul className={styles.formules}>
+            {formules.map((f, i) => (
               <li key={i}>
-                <span>{p.label}</span>
-                <strong>{p.price}</strong>
+                <span className={styles.label}>{f.label}</span>
+                <span className={styles.details}>
+                  {f.detail.map((d, k) => (
+                    <span className={styles.detail} key={k}>
+                      {d}
+                      {k + 1 !== f.detail.length ? (
+                        <span>{",\u00A0"}</span>
+                      ) : null}
+                    </span>
+                  ))}
+                </span>
+                <span className={styles.time}>{f.time}</span>
+                <span className={styles.price}>{f.price}</span>
               </li>
             ))}
           </ul>
@@ -72,7 +96,6 @@ export default function PrestationsCard({
             >
               Retour
             </button>
-            <button className={styles.buttonPrimary}>Demander un devis</button>
           </div>
         </div>
       </motion.div>

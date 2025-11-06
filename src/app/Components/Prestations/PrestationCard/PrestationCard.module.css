@@ -22,8 +22,7 @@
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   display: grid;
-  grid-template-rows: auto 1fr auto auto; /* titre, texte, bouton, image */
-  gap: 12px;
+  grid-template-rows: auto 1fr auto auto;
 }
 
 .front {
@@ -36,7 +35,7 @@
   color: white;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 40px;
   padding-top: 20px;
   border-radius: 10px;
 }
@@ -78,7 +77,7 @@
   overflow: hidden;
 }
 
-.media::after{
+.media::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -87,7 +86,7 @@
   background-color: rgba(0, 0, 0, 0.242);
 }
 
-.prices {
+.formules {
   list-style: none;
   margin: 8px 0 16px;
   padding: 0;
@@ -95,13 +94,37 @@
   gap: 8px;
 }
 
-.prices li {
+.formules li {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   padding: 10px 12px;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  gap: 5px;
+}
+
+.formules li .label {
+}
+
+.formules li .details {
+  font-size: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.formules li .detail {
+  display: flex;
+}
+
+.formules li .time {
+}
+
+.formules li .price {
 }
 
 .backActions {
@@ -134,26 +157,20 @@
   padding: 10px 20px;
   z-index: 2;
   font-size: 14px;
-  letter-spacing: .7px;
+  letter-spacing: 0.7px;
 }
 
-.buttonPrimary {
-  background: var(--cryo-ice, #a3c1d2);
-  border-color: var(--cryo-ice, #a3c1d2);
-  color: #0f1b26;
-}
 .buttonGhost {
   background: transparent;
 }
 
-/* Images démo (remplace par tes vraies images) */
 .imageVoiture,
 .imageBateau,
 .imageIndustrie {
   width: 98%;
   height: 200px;
   background-size: cover;
-  margin: 0 auto;
+  margin: 0;
   border-radius: 10px;
 }
 .imageVoiture {

@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  padding: 50px 20px 20px 20px;
+  padding: 30px 20px 20px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,6 +14,7 @@
   ); */
   background-image: url("/images/aboutBackground.png");
   background-position: -800px;
+  background-repeat: no-repeat;
 }
 
 .top,
@@ -28,7 +29,7 @@
 }
 
 .logo {
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
 
 .links {
@@ -44,11 +45,17 @@
   font-size: 18px;
 }
 
-.socials {
+.contacts {
     display: flex;
-    padding: 20px 0 50px 0;
+    flex-direction: column;
     gap: 20px;
-    width: 100%;
+    color: white;
+    padding-bottom: 20px;
+}
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .social {

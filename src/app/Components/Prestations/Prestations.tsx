@@ -41,22 +41,85 @@ export default function Prestations() {
           <PrestationCard
             title="Cryogénie Automobile"
             description={
-              <>
-                Un procédé de nettoyage par projection de glace carbonique qui
-                élimine graisses, poussières et impuretés sans eau, sans
-                produits chimiques et sans abrasion.
-                <br />
-                <br />
-                Idéal pour l’entretien des véhicules de prestige, des moteurs
-                aux carrosseries, en garantissant un résultat irréprochable tout
-                en préservant les matériaux.
-              </>
+<>
+Un procédé de nettoyage par projection de glace carbonique qui
+élimine graisses, poussières et impuretés sans eau, sans
+produits chimiques et sans abrasion. Les micro-granulés de CO₂ à
+–78 °C impactent la surface, subliment instantanément et
+décrochent la saleté sans lustrer ni altérer les supports, même
+les plus sensibles (peinture, plastiques, caoutchoucs, faisceaux,
+capteurs).
+<br />
+<br />
+Idéal pour l’entretien des véhicules de prestige, des moteurs
+aux carrosseries, en garantissant un résultat irréprochable tout
+en préservant les matériaux. La cryogénie automobile permet
+d’atteindre les zones difficilement accessibles, réduit le temps
+d’immobilisation, ne laisse aucun résidu humide et respecte
+l’environnement. Parfait pour les dessous de caisse,
+jantes, étriers, compartiments techniques et intérieurs délicats :
+elle supprime huiles, goudrons, résidus de colle,
+moisissures et odeurs.
+</>
             }
             imageClass={styles.imageVoiture}
-            prices={[
-              { label: "Compartiment moteur", price: "à partir de 180€" },
-              { label: "Châssis / trains roulants", price: "à partir de 220€" },
-              { label: "Détail complet", price: "sur devis" },
+            formules={[
+              {
+                label: "Formule Personnalisée",
+                detail: [""],
+                time: "",
+                price: "Sur devis",
+              },
+              {
+                label: "Formule Rubis",
+                detail: ["Haut moteur."],
+                time: "~2h",
+                price: "à partir de 380€",
+              },
+              {
+                label: "Formule Saphir",
+                detail: ["Haut moteur", "Bas moteur", "Compartiment moteur."],
+                time: "~3h30",
+                price: "à partir de 880€",
+              },
+              {
+                label: "Formule Émeraude",
+                detail: [
+                  "Haut moteur",
+                  "Bas moteur",
+                  "Compartiment moteur",
+                  "Châssis.",
+                ],
+                time: "~5h",
+                price: "à partir de 1280€",
+              },
+              {
+                label: "Formule Diamant",
+                detail: [
+                  "Haut moteur",
+                  "Bas moteur",
+                  "Compartiment moteur",
+                  "Châssis",
+                  "Intérieur roues",
+                  "Intérieur jantes.",
+                ],
+                time: "~7h",
+                price: "à partir de 1880€",
+              },
+              {
+                label: "Formule Crystal",
+                detail: [
+                  "Haut moteur",
+                  "Bas moteur",
+                  "Compartiment moteur",
+                  "Châssis",
+                  "Intérieur roues",
+                  "Intérieur jantes",
+                  "Traitemet roulements.",
+                ],
+                time: "~10h",
+                price: "à partir de 2780€",
+              },
             ]}
           />
 
@@ -74,10 +137,37 @@ export default function Prestations() {
               </>
             }
             imageClass={styles.imageBateau}
-            prices={[
-              { label: "Moteur / Salle des machines", price: "sur devis" },
-              { label: "Pont & accastillage", price: "à partir de 260€" },
-              { label: "Traitement complet", price: "sur devis" },
+            formules={[
+              {
+                label: "Formule Personnalisée",
+                detail: [""],
+                time: "",
+                price: "Sur devis",
+              },
+              {
+                label: "Formule Émeraude",
+                detail: ["Pont en teck", "Deck synthétique."],
+                time: "",
+                price: "à partir de 350€/h",
+              },
+              {
+                label: "Formule Diamant",
+                detail: ["Coque", "Oeuvres vives."],
+                time: "",
+                price: "à partir de 350€/h",
+              },
+              {
+                label: "Formule Crystal",
+                detail: ["Cale moteur", "Compartiments techniques."],
+                time: "",
+                price: "à partir de 350€/h",
+              },
+              {
+                label: "Prestations supplémentaires",
+                detail: ["Poste de pilotage", "Selleries", "Boudins", "..."],
+                time: "",
+                price: "Sur devis",
+              },
             ]}
           />
 
@@ -95,10 +185,31 @@ export default function Prestations() {
               </>
             }
             imageClass={styles.imageIndustrie}
-            prices={[
-              { label: "Pièces mécaniques", price: "à partir de 160€" },
-              { label: "Bâtiments / Patrimoine", price: "sur devis" },
-              { label: "Intervention sur site", price: "sur devis" },
+            formules={[
+              {
+                label: "Formule Personnalisée",
+                detail: [""],
+                time: "",
+                price: "Sur devis",
+              },
+              {
+                label: "Pièces mécaniques",
+                detail: [""],
+                time: "",
+                price: "à partir de 160€",
+              },
+              {
+                label: "Bâtiments / Patrimoine",
+                detail: [""],
+                time: "",
+                price: "sur devis",
+              },
+              {
+                label: "Intervention sur site",
+                detail: [""],
+                time: "",
+                price: "sur devis",
+              },
             ]}
           />
         </div>

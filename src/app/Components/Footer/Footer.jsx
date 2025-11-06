@@ -3,7 +3,7 @@ import styles from "./Footer.module.css"
 import Link from "next/link"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faLocationDot, faMapLocation, faMapLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faLocationDot, faMapLocation, faMapLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 function Footer() {
     return (
@@ -17,6 +17,32 @@ function Footer() {
                         height={150}
                         priority
                     />
+                </div>
+                <div className={styles.contacts}>
+                    <div className={styles.contact}>
+                        <Link href="" className={styles.social}>
+                            <FontAwesomeIcon icon={faLocationDot} style={{ color: "white" }} />
+                        </Link>
+                        <p>Basés à Sainte-Maxime (83120), nous opérons dans toute la région PACA.</p>
+                    </div>
+                    <div className={styles.contact}>
+                        <Link href="" className={styles.social}>
+                            <FontAwesomeIcon icon={faPhone} style={{ color: "white" }} />
+                        </Link>
+                        <p>06.22.95.44.07</p>
+                    </div>
+                    <div className={styles.contact}>
+                        <Link href="" className={styles.social}>
+                            <FontAwesomeIcon icon={faEnvelope} style={{ color: "white" }} />
+                        </Link>
+                        <p>crystal.cryo83120@gmail.com</p>
+                    </div>
+                    <div className={styles.contact}>
+                        <Link href="" className={styles.social}>
+                            <FontAwesomeIcon icon={faInstagram} style={{ color: "white" }} />
+                        </Link>
+                        <p><i>Bientôt...</i></p>
+                    </div>
                 </div>
                 <div className={styles.links}>
                     <p style={{ paddingBottom: "10px", fontSize: "16px", color: "grey" }}>Liens utiles</p>
@@ -32,17 +58,6 @@ function Footer() {
                             </Link>
                         </li>
                     </ul>
-                </div>
-                <div className={styles.socials}>
-                    <Link href="" className={styles.social}>
-                        <FontAwesomeIcon icon={faInstagram} style={{ color: "white" }} />
-                    </Link>
-                    <Link href="" className={styles.social}>
-                        <FontAwesomeIcon icon={faPhone} style={{ color: "white" }} />
-                    </Link>
-                    <Link href="" className={styles.social}>
-                        <FontAwesomeIcon icon={faLocationDot} style={{ color: "white" }} />
-                    </Link>
                 </div>
             </div >
             <div className={styles.bottom}>
