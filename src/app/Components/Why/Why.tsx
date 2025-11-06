@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Why.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowsSpin, faBold, faBolt, faCheckDouble, faCircleCheck, faGaugeHigh, faHandshake, faHandSparkles, faHeartCircleCheck, faHouseUser, faShieldHeart, faVirusCovidSlash } from "@fortawesome/free-solid-svg-icons";
+import { faArrowsSpin, faBolt, faCheckDouble, faCircleCheck, faGaugeHigh, faHandshake, faHandSparkles, faHeartCircleCheck, faHouseUser, faShieldHeart, faVirusCovidSlash } from "@fortawesome/free-solid-svg-icons";
 
 export default function Why() {
   return (
@@ -14,7 +14,7 @@ export default function Why() {
       <div className={styles.content}>
         <p>
           <FontAwesomeIcon icon={faCircleCheck} style={{ color: "white" }} />
-          <span>Principe propre.</span> Pas d'eau, pas de déchet, pasde solvant,
+          <span>Principe propre.</span> Pas d&apos;eau, pas de déchet, pasde solvant,
           pas de poussière.
         </p>
         <p>
@@ -29,17 +29,17 @@ export default function Why() {
         </p>
         <p>
           <FontAwesomeIcon icon={faCheckDouble} style={{ color: "white" }} />
-          <span>Nettoyage des endroits difficiles d'accès.</span>
+          <span>Nettoyage des endroits difficiles d&apos;accès.</span>
         </p>
         <p>
           <FontAwesomeIcon icon={faArrowsSpin} style={{ color: "white" }} />
-          <span>Traitement sans démontage.</span>Pas d'arrêt des matériels sous
+          <span>Traitement sans démontage.</span>Pas d&apos;arrêt des matériels sous
           tension.
         </p>
         <p>
           <FontAwesomeIcon icon={faHouseUser} style={{ color: "white" }} />
           <span>Pas de dégradation des abords.</span>Possibilité de travailler à
-          l'intérieur.
+          l&apos;intérieur.
         </p>
         <p>
           <FontAwesomeIcon icon={faShieldHeart} style={{ color: "white" }} />
@@ -52,7 +52,7 @@ export default function Why() {
         </p>
         <p>
           <FontAwesomeIcon icon={faBolt} style={{ color: "white" }} />
-          <span>Rapidité d'exécution.</span>
+          <span>Rapidité d&apos;exécution.</span>
         </p>
         <p>
           <FontAwesomeIcon icon={faHeartCircleCheck} style={{ color: "white" }} />
