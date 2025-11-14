@@ -18,6 +18,7 @@ function Hero() {
             priority
           />
         </Link>
+
         <div className={styles.text}>
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
@@ -41,21 +42,22 @@ function Hero() {
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.6 }}
-            transition={{ duration: 0.6,delay: .3 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
             className={styles.subTitle}
             style={{ paddingBottom: "30px" }}
           >
             Le <span>froid</span> au service de l’<span>excellence</span>.
           </motion.p>
-          <motion.button
+          <motion.a
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.6 }}
-            transition={{ duration: 0.6, delay: .6 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
             className={styles.button}
+            href="#about"
           >
             Découvrir
-          </motion.button>
+          </motion.a>
         </div>
       </div>
 

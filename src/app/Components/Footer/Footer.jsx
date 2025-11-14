@@ -7,7 +7,7 @@ import { faEnvelope, faLocationDot, faMapLocation, faMapLocationDot, faPhone } f
 
 function Footer() {
     return (
-        <div className={styles.container}>
+        <div className={styles.container} id="contact">
             <div className={styles.top}>
                 <div className={styles.logo}>
                     <Image
@@ -26,19 +26,19 @@ function Footer() {
                         <p>Basés à Sainte-Maxime (83120), nous opérons dans toute la région PACA.</p>
                     </div>
                     <div className={styles.contact}>
-                        <Link href="" className={styles.social}>
+                        <Link href="tel:0622954407" className={styles.social} aria-label="Appeler le 06 22 95 44 07">
                             <FontAwesomeIcon icon={faPhone} style={{ color: "white" }} />
                         </Link>
                         <p>06.22.95.44.07</p>
                     </div>
                     <div className={styles.contact}>
-                        <Link href="" className={styles.social}>
+                        <Link href="mailto:crystal.cryo83120@gmail.com?subject=Demande%20d%27infos" className={styles.social}>
                             <FontAwesomeIcon icon={faEnvelope} style={{ color: "white" }} />
                         </Link>
                         <p>crystal.cryo83120@gmail.com</p>
                     </div>
                     <div className={styles.contact}>
-                        <Link href="" className={styles.social}>
+                        <Link href="https://www.instagram.com/crystal_cryo83/" className={styles.social}>
                             <FontAwesomeIcon icon={faInstagram} style={{ color: "white" }} />
                         </Link>
                         <p>@crystal_cryo83</p>

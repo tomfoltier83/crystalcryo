@@ -38,16 +38,21 @@
   margin: auto;
   border-radius: 10px;
 }
+
 .imageVoiture {
     background-image: url("/images/presta_voiture.png");
-
 }
 .imageBateau {
-
   background-image: url("/images/presta_bateau.png");
-
 }
 .imageIndustrie {
     background-image: url("/images/presta_industrie.png");
-
 }
+.imageAero {
+    background-image: url("/images/presta_aero.png");
+}
+.imageMoto{
+  background-image: url("/images/presta_moto.png");
+}
+
+

@@ -1,4 +1,3 @@
-// PrestationsCard.tsx
 "use client";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
@@ -31,7 +30,7 @@ export default function PrestationsCard({
   const recalc = () => {
     const fh = frontRef.current?.scrollHeight ?? 0;
     const bh = backRef.current?.scrollHeight ?? 0;
-    const next = flipped ? Math.max(fh, bh) + 20 : Math.max(fh, bh) + 40;
+    const next = flipped ? Math.max(fh, bh) - 20 : Math.max(fh, bh) + 20;
     setHeight((prev) =>
       prev === undefined || Math.abs(prev - next) > 1 ? next : prev
     );
@@ -41,8 +40,26 @@ export default function PrestationsCard({
     recalc();
   }, [flipped]);
 
+  const flipCard = () => {
+    if (
+      title !== "Cryogénie Industrielle & Patrimoniale" &&
+      title !== "Cryogénie Aéronautique" &&
+      title !== "Cryogénie Moto"
+    ) {
+      setFlipped(true);
+    }
+  };
+
   return (
-    <div className={styles.card} ref={cardRef} style={{ height: height }}>
+    <motion.div
+      initial={{ opacity: 0, x: 200 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, amount: 0.6 }}
+      transition={{ duration: 0.8, delay: 0.6 }}
+      className={styles.card}
+      ref={cardRef}
+      style={{ height: height }}
+    >
       <motion.div
         className={styles.cardInner}
         animate={{ rotateY: flipped ? 180 : 0 }}
@@ -54,14 +71,16 @@ export default function PrestationsCard({
           <p>{description}</p>
 
           <div className={`${styles.media} ${imageClass}`}>
-            {title !== "Cryogénie Industrielle & Patrimoniale" && (
-              <button
-                className={`${styles.button} ${styles.buttonGhost}`}
-                onClick={() => setFlipped(true)}
-              >
-                Voir les tarifs
-              </button>
-            )}
+            <button
+              className={`${styles.button} ${styles.buttonGhost}`}
+              onClick={flipCard}
+            >
+              {title !== "Cryogénie Industrielle & Patrimoniale" &&
+              title !== "Cryogénie Aéronautique" &&
+              title !== "Cryogénie Moto"
+                ? "Voir les tarifs"
+                : "Tarifs sur devis"}
+            </button>
           </div>
         </div>
 
@@ -99,6 +118,6 @@ export default function PrestationsCard({
           </div>
         </div>
       </motion.div>
-    </div>
+    </motion.div>
   );
 }
