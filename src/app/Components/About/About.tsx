@@ -12,8 +12,8 @@ function About() {
         <motion.h2
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.9 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          viewport={{ once: true, amount: 0.6 }}
+          transition={{ duration: 0.8, delay: .3 }}
           className={styles.title}
         >
           La puissance du froid,{" "}
@@ -24,8 +24,8 @@ function About() {
         <motion.p
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.9 }}
-          transition={{ duration: 0.8, delay: 1 }}
+          viewport={{ once: true, amount: 0.6 }}
+          transition={{ duration: 0.8, delay: .6 }}
           className={styles.subTitle}
         >
           Face aux limites des méthodes traditionnelles, la cryogénie s’impose
@@ -40,7 +40,7 @@ function About() {
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.9 }}
-          transition={{ duration: 0.8, delay: 1.4 }}
+          transition={{ duration: 0.8, delay: .8 }}
           className={styles.notaBene}
         >
           <span>À savoir :</span>

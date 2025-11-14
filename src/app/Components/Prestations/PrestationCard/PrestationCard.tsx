@@ -52,10 +52,10 @@ export default function PrestationsCard({
 
   return (
     <motion.div
-      initial={{ opacity: 0, x: 200 }}
+      initial={{ opacity: 0, x: 100 }}
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, amount: 0.6 }}
-      transition={{ duration: 0.8, delay: 0.6 }}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{ duration: 0.8, delay: 0.3 }}
       className={styles.card}
       ref={cardRef}
       style={{ height: height }}

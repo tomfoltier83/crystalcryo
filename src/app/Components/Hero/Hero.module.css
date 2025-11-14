@@ -28,8 +28,6 @@
   display: block;
 }
 
-
-
 .text {
   display: flex;
   flex-direction: column;
@@ -80,4 +78,10 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+@media (min-width: 768px) {
+  .text {
+    padding: 3rem 5rem;
+  }
 }

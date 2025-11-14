@@ -4,6 +4,7 @@
   perspective: 1200px; /* profondeur */
 }
 
+
 .cardInner {
   position: relative;
   width: 100%;
@@ -164,21 +165,21 @@
   background: transparent;
 }
 
-.imageVoiture,
-.imageBateau,
-.imageIndustrie {
-  width: 98%;
-  height: 200px;
-  background-size: cover;
-  margin: 0;
-  border-radius: 10px;
-}
-.imageVoiture {
-  background-image: url("/images/presta_voiture.png");
-}
-.imageBateau {
-  background-image: url("/images/presta_bateau.png");
-}
-.imageIndustrie {
-  background-image: url("/images/presta_industrie.png");
+@media (min-width: 768px) {
+  .card{
+    width: 40%;
+  }
+
+  .front h3 {
+    text-align: center;
+  }
+
+  .front p {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .media {
+    min-height: 300px;
+  }
 }

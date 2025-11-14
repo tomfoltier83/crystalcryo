@@ -30,7 +30,7 @@ export default function Why() {
         <motion.p
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.6 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.4, delay: 0.3 }}
         >
           <span className={styles.glass}>
@@ -42,7 +42,7 @@ export default function Why() {
         <motion.p
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.6 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.4, delay: 0.3 }}
         >
           <span className={styles.glass}>
@@ -54,7 +54,7 @@ export default function Why() {
         <motion.p
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.6 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.4, delay: 0.3 }}
         >
           <span className={styles.glass}>
@@ -66,7 +66,7 @@ export default function Why() {
         <motion.p
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.6 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.4, delay: 0.3 }}
         >
           <span className={styles.glass}>
@@ -78,7 +78,7 @@ export default function Why() {
         <motion.p
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.6 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.4, delay: 0.3 }}
         >
           <span className={styles.glass}>
@@ -90,7 +90,7 @@ export default function Why() {
         <motion.p
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.6 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.4, delay: 0.3 }}
         >
           <span className={styles.glass}>
@@ -102,7 +102,7 @@ export default function Why() {
         <motion.p
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.6 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.4, delay: 0.3 }}
         >
           <span className={styles.glass}>
@@ -113,7 +113,7 @@ export default function Why() {
         <motion.p
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.6 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.4, delay: 0.3 }}
         >
           <span className={styles.glass}>
@@ -128,7 +128,7 @@ export default function Why() {
         <motion.p
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.6 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.4, delay: 0.3 }}
         >
           <span className={styles.glass}>
@@ -139,7 +139,7 @@ export default function Why() {
         <motion.p
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.6 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.4, delay: 0.3 }}
         >
           <span className={styles.glass}>
@@ -155,7 +155,7 @@ export default function Why() {
         <motion.p
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.6 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.4, delay: 0.3 }}
         >
           <span className={styles.glass}>

@@ -20,7 +20,8 @@ function Footer() {
                 </div>
                 <div className={styles.contacts}>
                     <div className={styles.contact}>
-                        <Link href="" className={styles.social}>
+                        <Link href="#contact
+                        " className={styles.social}>
                             <FontAwesomeIcon icon={faLocationDot} style={{ color: "white" }} />
                         </Link>
                         <p>Basés à Sainte-Maxime (83120), nous opérons dans toute la région PACA.</p>
