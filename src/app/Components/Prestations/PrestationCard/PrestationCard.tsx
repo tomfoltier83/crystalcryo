@@ -51,6 +51,7 @@ export default function PrestationsCard({
   };
 
   return (
+    <div className={styles.cardWrapper}>
     <motion.div
       initial={{ opacity: 0, x: 100 }}
       whileInView={{ opacity: 1, x: 0 }}
@@ -69,7 +70,6 @@ export default function PrestationsCard({
         <div className={`${styles.cardFace} ${styles.front}`} ref={frontRef}>
           <h3>{title}</h3>
           <p>{description}</p>
-
           <div className={`${styles.media} ${imageClass}`}>
             <button
               className={`${styles.button} ${styles.buttonGhost}`}
@@ -119,5 +119,6 @@ export default function PrestationsCard({
         </div>
       </motion.div>
     </motion.div>
+    </div>
   );
 }
