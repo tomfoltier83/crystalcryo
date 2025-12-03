@@ -68,19 +68,19 @@ export default function Prestations() {
                 label: "Formule Personnalisée",
                 detail: [""],
                 time: "",
-                price: "Sur devis",
+                price: "",
               },
               {
                 label: "Formule Rubis",
                 detail: ["Haut moteur."],
                 time: "",
-                price: "à partir de 380€",
+                price: "",
               },
               {
                 label: "Formule Saphir",
                 detail: ["Haut moteur", "Bas moteur", "Compartiment moteur."],
                 time: "",
-                price: "à partir de 880€",
+                price: "",
               },
               {
                 label: "Formule Émeraude",
@@ -91,7 +91,7 @@ export default function Prestations() {
                   "Châssis.",
                 ],
                 time: "",
-                price: "à partir de 1280€",
+                price: "",
               },
               {
                 label: "Formule Diamant",
@@ -104,7 +104,7 @@ export default function Prestations() {
                   "Intérieur jantes.",
                 ],
                 time: "",
-                price: "à partir de 1880€",
+                price: "",
               },
               {
                 label: "Formule Crystal",
@@ -118,7 +118,7 @@ export default function Prestations() {
                   "Traitemet roulements.",
                 ],
                 time: "",
-                price: "à partir de 2780€",
+                price: "",
               },
             ]}
           />
