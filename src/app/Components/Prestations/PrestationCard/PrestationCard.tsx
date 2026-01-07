@@ -1,7 +1,8 @@
 "use client";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useMemo, useRef, useState } from "react";
 import styles from "./PrestationCard.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 type CardProps = {
   title: string;
@@ -13,6 +14,7 @@ type CardProps = {
     time: string;
     price: string;
   }>;
+  visibleIndex: boolean;
 };
 
 export default function PrestationsCard({
@@ -20,73 +22,58 @@ export default function PrestationsCard({
   description,
   imageClass,
   formules,
+  visibleIndex
 }: CardProps) {
-  const [flipped, setFlipped] = useState(false);
-  const cardRef = useRef<HTMLDivElement>(null);
-  const frontRef = useRef<HTMLDivElement>(null);
-  const backRef = useRef<HTMLDivElement>(null);
-  const [height, setHeight] = useState<number | undefined>(undefined);
+  const [open, setOpen] = useState(false);
 
-  const recalc = () => {
-    const fh = frontRef.current?.scrollHeight ?? 0;
-    const bh = backRef.current?.scrollHeight ?? 0;
-    const next = flipped ? Math.max(fh, bh) - 20 : Math.max(fh, bh) + 20;
-    setHeight((prev) =>
-      prev === undefined || Math.abs(prev - next) > 1 ? next : prev
-    );
-  };
+  const isDevis = useMemo(
+    () =>
+      title === "Cryogénie Industrielle & Patrimoniale" ||
+      title === "Cryogénie Aéronautique" ||
+      title === "Cryogénie Moto",
+    [title]
+  );
 
-  useLayoutEffect(() => {
-    recalc();
-  }, [flipped]);
-
-  const flipCard = () => {
-    if (
-      title !== "Cryogénie Industrielle & Patrimoniale" &&
-      title !== "Cryogénie Aéronautique" &&
-      title !== "Cryogénie Moto"
-    ) {
-      setFlipped(true);
-    }
+  const openTarifs = () => {
+    if (!isDevis) setOpen(true);
   };
 
   return (
-    <div className={styles.cardWrapper}>
-    <motion.div
-      initial={{ opacity: 0, x: 100 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, amount: 0.1 }}
-      transition={{ duration: 0.8, delay: 0.3 }}
-      className={styles.card}
-      ref={cardRef}
-      style={{ height: height }}
+    <div
+      className={styles.cardWrapper}
+      data-open={open ? "true" : "false"}
+      style={{ background: visibleIndex ? "#87c2e3" : "" }}
     >
-      <motion.div
-        className={styles.cardInner}
-        animate={{ rotateY: flipped ? 180 : 0 }}
-        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-      >
+      <div className={styles.card}>
         {/* FRONT */}
-        <div className={`${styles.cardFace} ${styles.front}`} ref={frontRef}>
+        <div className={styles.front} aria-hidden={open}>
           <h3>{title}</h3>
           <p>{description}</p>
+
           <div className={`${styles.media} ${imageClass}`}>
             <button
               className={`${styles.button} ${styles.buttonGhost}`}
-              onClick={flipCard}
+              onClick={openTarifs}
+              type="button"
+              disabled={isDevis}
             >
-              {title !== "Cryogénie Industrielle & Patrimoniale" &&
-              title !== "Cryogénie Aéronautique" &&
-              title !== "Cryogénie Moto"
-                ? "Voir les tarifs"
-                : "Tarifs sur devis"}
+              {!isDevis ? "Voir les tarifs" : "Tarifs sur devis"}
             </button>
           </div>
         </div>
 
         {/* BACK */}
-        <div className={`${styles.cardFace} ${styles.back}`} ref={backRef}>
-          <h4 style={{ marginTop: 0 }}>
+        <div className={styles.back} aria-hidden={!open}>
+          <div className={styles.backActions}>
+            <button
+              className={styles.backButton}
+              onClick={() => setOpen(false)}
+              type="button"
+            >
+              <FontAwesomeIcon icon={faXmark} style={{ color: "white" }} />
+            </button>
+          </div>
+          <h4 className={styles.backTitle}>
             Tarifs <span>(HT)</span>
           </h4>
           <ul className={styles.formules}>
@@ -97,28 +84,18 @@ export default function PrestationsCard({
                   {f.detail.map((d, k) => (
                     <span className={styles.detail} key={k}>
                       {d}
-                      {k + 1 !== f.detail.length ? (
-                        <span>{",\u00A0"}</span>
-                      ) : null}
+                      {k + 1 !== f.detail.length ? <span>,&nbsp;</span> : null}
                     </span>
                   ))}
                 </span>
+
                 <span className={styles.time}>{f.time}</span>
                 <span className={styles.price}>{f.price}</span>
               </li>
             ))}
           </ul>
-          <div className={styles.backActions}>
-            <button
-              className={styles.buttonGhost}
-              onClick={() => setFlipped(false)}
-            >
-              Retour
-            </button>
-          </div>
         </div>
-      </motion.div>
-    </motion.div>
+      </div>
     </div>
   );
 }

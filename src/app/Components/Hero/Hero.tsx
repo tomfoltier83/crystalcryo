@@ -61,11 +61,13 @@ function Hero() {
         </div>
       </div>
 
-      <div className={styles.video}>
+      <div className={styles.backgroundImage}></div>
+
+      {/* <div className={styles.video}>
         <video playsInline autoPlay loop muted preload="true">
           <source src="/videos/hero.mp4" type="video/mp4" />
         </video>
-      </div>
+      </div> */}
     </div>
   );
 }

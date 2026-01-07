@@ -6,6 +6,9 @@
   padding: 20px;
   gap: 20px;
   padding-bottom: 50px;
+  background-image: url("/images/aboutBackground.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .title {
@@ -38,8 +41,8 @@
   text-align: center;
   gap: 10px;
   align-items: center;
-    max-width: 80%;
-
+  max-width: 80%;
+  font-size: 14px;
 }
 
 .content p .glass {
@@ -92,5 +95,7 @@
 }
 
 .content p span {
-  font-weight: 900;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  font-size: 18px;
 }

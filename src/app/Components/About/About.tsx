@@ -3,6 +3,7 @@ import React from "react";
 import styles from "./About.module.css";
 import IceCrystalVideo from "../IceCrystalVideo/IceCrystalVideo";
 import { motion } from "motion/react";
+import Image from "next/image";
 
 function About() {
   return (
@@ -13,7 +14,7 @@ function About() {
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.6 }}
-          transition={{ duration: 0.8, delay: .3 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
           className={styles.title}
         >
           La puissance du froid,{" "}
@@ -25,7 +26,7 @@ function About() {
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.6 }}
-          transition={{ duration: 0.8, delay: .6 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
           className={styles.subTitle}
         >
           Face aux limites des méthodes traditionnelles, la cryogénie s’impose
@@ -40,14 +41,16 @@ function About() {
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.9 }}
-          transition={{ duration: 0.8, delay: .8 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
           className={styles.notaBene}
         >
-          <span>À savoir :</span>
-          <p>
-            Il est possible de traiter absolument toutes les surfaces et tous
-            types de supports.
-          </p>
+          <div className={styles.notaBeneContent}>
+            <span>À savoir :</span>
+            <p>
+              Il est possible de traiter absolument toutes les surfaces et tous
+              types de supports.
+            </p>
+          </div>
         </motion.div>
       </div>
     </div>
